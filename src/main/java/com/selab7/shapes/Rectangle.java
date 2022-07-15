@@ -15,6 +15,22 @@ public class Rectangle {
         }
     }
 
+    public void setWidth(double width) {
+        if (width > 0 && width <= this.height) {
+            this.width = width;
+        } else {
+            throw new InvalidSizeForCalculateAreaException(width, this.height);
+        }
+    }
+
+    public void setHeight(double height) {
+        if (height > 0 && height >= this.width) {
+            this.height = height;
+        } else {
+            throw new InvalidSizeForCalculateAreaException(this.width, height);
+        }
+    }
+
     public double calculateArea() {
         return this.width * this.height;
     }
