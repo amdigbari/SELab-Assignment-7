@@ -2,7 +2,7 @@ package com.selab7.shapes;
 
 import com.selab7.exceptions.InvalidSizeForCalculateAreaException;
 
-public class Rectangle {
+public class Rectangle implements Shape {
     private double width;
     private double height;
 
